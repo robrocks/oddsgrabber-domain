@@ -4,23 +4,41 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.rrt3ch</groupId>
+    <repositories>
+        <repository>
+            <id>git-rrt3ch</id>
+            <name>rrt3ch's Git based repo</name>
+            <url>https://github.com/rrt3ch</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+    </repositories>
+
+    <parent>
+        <groupId>pro.rrt3ch.odds</groupId>
+        <artifactId>odds-parent</artifactId>
+        <version>1.0.1</version>
+    </parent>
+
     <artifactId>oddsgrabber-domain</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>oddsgrabber-domain</name>
-    <url>https://github.com/rrt3ch</url>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <github.odds-parent.repository>https://github.com/rrt3ch/odds-parent</github.odds-parent.repository>
         <mainClass></mainClass>
     </properties>
 
-    <distributionManagement>
-        <repository>
-            <id>odds-parent</id>
-            <url>${github.odds-parent.repository}</url>
-        </repository>
-    </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
