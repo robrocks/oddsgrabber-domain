@@ -17,7 +17,8 @@
     <parent>
         <groupId>pro.rrt3ch.odds</groupId>
         <artifactId>odds-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../odds-parent/pom.xml</relativePath>
     </parent>
 
     <artifactId>oddsgrabber-domain</artifactId>
