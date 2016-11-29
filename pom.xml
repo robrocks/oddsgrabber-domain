@@ -6,11 +6,8 @@
 
     <repositories>
         <repository>
-            <id>git-rrt3ch</id>
-            <name>rrt3ch's Git based repo</name>
-            <url>https://github.com/rrt3ch</url>
-            <releases><enabled>true</enabled></releases>
-            <snapshots><enabled>true</enabled></snapshots>
+            <id>git-rrt3ch-repository</id>
+            <url>https://github.com/rrt3ch/raw/master</url>
         </repository>
     </repositories>
 
@@ -18,7 +15,6 @@
         <groupId>pro.rrt3ch.odds</groupId>
         <artifactId>odds-parent</artifactId>
         <version>1.0.1-SNAPSHOT</version>
-        <relativePath>../odds-parent/pom.xml</relativePath>
     </parent>
 
     <artifactId>oddsgrabber-domain</artifactId>
