@@ -4,13 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <repositories>
-        <repository>
-            <id>rrt3ch-maven-repository</id>
-            <url>https://github.com/rrt3ch/maven-repository/raw/master</url>
-        </repository>
-    </repositories>
-
     <parent>
         <groupId>pro.rrt3ch.odds</groupId>
         <artifactId>odds-parent</artifactId>
@@ -25,6 +18,13 @@
     <properties>
         <mainClass></mainClass>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>rrt3ch-maven-repository</id>
+            <url>https://github.com/rrt3ch/maven-repository/raw/master</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
