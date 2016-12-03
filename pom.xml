@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>pro.rrt3ch.odds</groupId>
+        <groupId>org.rrt3ch.tellmetheodds</groupId>
         <artifactId>odds-parent</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>oddsgrabber-domain</artifactId>
