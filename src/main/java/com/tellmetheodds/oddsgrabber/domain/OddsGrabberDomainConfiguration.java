@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
  *
  * Created by rr.t3ch on 18/12/16.
  */
-public class OddsgrabberDomainConfiguration extends Configuration {
+public class OddsGrabberDomainConfiguration extends Configuration {
 
     /**
      * The swagger bundle configuration.

@@ -1,5 +1,6 @@
 package com.tellmetheodds.oddsgrabber.domain;
 
+import com.tellmetheodds.oddsgrabber.domain.resources.OddsGrabberDomainResource;
 import io.federecio.dropwizard.swagger.SwaggerBundle;
 import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 import org.slf4j.Logger;
@@ -13,9 +14,9 @@ import io.dropwizard.setup.Environment;
  *
  * Created by rr.t3ch on 18/12/16.
  */
-public class OddsgrabberDomainApplication extends Application<OddsgrabberDomainConfiguration>{
+public class OddsGrabberDomainApplication extends Application<OddsGrabberDomainConfiguration>{
 
-    private  static final Logger LOGGER = LoggerFactory.getLogger(OddsgrabberDomainApplication.class);
+    private  static final Logger LOGGER = LoggerFactory.getLogger(OddsGrabberDomainApplication.class);
 
     /**
      * Starting point of the Dropwizard application.
@@ -24,7 +25,7 @@ public class OddsgrabberDomainApplication extends Application<OddsgrabberDomainC
      * @throws Exception the Exception thrown.
      */
     public static void main (String args[]) throws Exception {
-        new OddsgrabberDomainApplication().run(args);
+        new OddsGrabberDomainApplication().run(args);
     }
 
     /**
@@ -33,10 +34,10 @@ public class OddsgrabberDomainApplication extends Application<OddsgrabberDomainC
      * @param bootstrap config file of the application
      */
     @Override
-    public void initialize(Bootstrap<OddsgrabberDomainConfiguration> bootstrap) {
-        bootstrap.addBundle(new SwaggerBundle<OddsgrabberDomainConfiguration>() {
+    public void initialize(Bootstrap<OddsGrabberDomainConfiguration> bootstrap) {
+        bootstrap.addBundle(new SwaggerBundle<OddsGrabberDomainConfiguration>() {
             @Override
-            protected SwaggerBundleConfiguration getSwaggerBundleConfiguration(OddsgrabberDomainConfiguration configuration) {
+            protected SwaggerBundleConfiguration getSwaggerBundleConfiguration(OddsGrabberDomainConfiguration configuration) {
                 return configuration.getSwaggerBundleConfiguration();
             }
         });
@@ -50,7 +51,8 @@ public class OddsgrabberDomainApplication extends Application<OddsgrabberDomainC
      * @throws Exception unable to start Dropwizard application
      */
     @Override
-    public void run(OddsgrabberDomainConfiguration configuration, Environment environment) throws Exception {
+    public void run(OddsGrabberDomainConfiguration configuration, Environment environment) throws Exception {
+        environment.jersey().register(new OddsGrabberDomainResource());
         LOGGER.info("Oddsgrabber Domain started succesfully");
     }
 }

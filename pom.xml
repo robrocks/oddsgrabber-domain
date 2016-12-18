@@ -16,7 +16,7 @@
     <name>oddsgrabber-domain</name>
 
     <properties>
-        <mainClass>com.tellmetheodds.oddsgrabber.domain.OddsgrabberDomainApplication</mainClass>
+        <mainClass>com.tellmetheodds.oddsgrabber.domain.OddsGrabberDomainApplication</mainClass>
     </properties>
 
     <repositories>
